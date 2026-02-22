@@ -124,8 +124,8 @@ app.get('/api/stats', requireAuth, (req, res) => {
 });
 
 // ─── Start server ─────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n✅ Servidor corriendo en http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`\n✅ Servidor corriendo en http://0.0.0.0:${PORT}`);
   console.log(`   Usuarios de prueba:`);
   console.log(`   • admin / admin123`);
   console.log(`   • usuario / pass123\n`);
