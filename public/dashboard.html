@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — VisitTracker</title>
+    <meta name="description" content="Panel de analíticas y contador de visitas en tiempo real." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+        <!-- ── Sidebar ─────────────────────────────────── -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon">
+                    <span class="material-icons sm" style="color:#fff">bar_chart</span>
+                </div>
+                <div>
+                    <div class="brand-name">VisitTracker</div>
+                    <div class="brand-sub">Panel de control</div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a class="nav-item active" href="#">
+                    <span class="material-icons">home</span>
+                    Inicio
+                </a>
+                <a class="nav-item" href="#" onclick="return false">
+                    <span class="material-icons">person_outline</span>
+                    Perfil
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-pill">
+                    <div class="avatar" id="user-avatar">A</div>
+                    <div class="user-info">
+                        <div class="name" id="user-name">admin</div>
+                        <div class="role">Administrador</div>
+                    </div>
+                </div>
+                <button class="btn btn-outline btn-full" id="btn-logout">
+                    <span class="material-icons sm">logout</span>
+                    Cerrar sesión
+                </button>
+            </div>
+        </aside>
+
+        <!-- ── Main Content ────────────────────────────── -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <div class="page-header">
+                <div>
+                    <h1>Panel de Visitas</h1>
+                    <p class="subtitle">Actualización automática cada 5 segundos</p>
+                </div>
+                <div class="live-badge">
+                    <span class="live-dot"></span> EN VIVO
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card" style="animation-delay:.05s">
+                    <div class="stat-icon">
+                        <span class="material-icons">equalizer</span>
+                    </div>
+                    <div class="stat-value" id="stat-total">—</div>
+                    <div class="stat-label">Visitas totales</div>
+                    <div class="stat-change">
+                        <span class="material-icons sm">trending_up</span> Acumulado
+                    </div>
+                </div>
+
+                <div class="stat-card" style="animation-delay:.1s">
+                    <div class="stat-icon">
+                        <span class="material-icons">today</span>
+                    </div>
+                    <div class="stat-value" id="stat-today">—</div>
+                    <div class="stat-label">Visitas hoy</div>
+                    <div class="stat-change">
+                        <span class="material-icons sm">trending_up</span> Hoy
+                    </div>
+                </div>
+
+                <div class="stat-card" style="animation-delay:.15s">
+                    <div class="stat-icon">
+                        <span class="material-icons">date_range</span>
+                    </div>
+                    <div class="stat-value" id="stat-week">—</div>
+                    <div class="stat-label">Últimos 7 días</div>
+                    <div class="stat-change">
+                        <span class="material-icons sm">trending_up</span> Esta semana
+                    </div>
+                </div>
+
+                <div class="stat-card" style="animation-delay:.2s">
+                    <div class="stat-icon">
+                        <span class="material-icons">show_chart</span>
+                    </div>
+                    <div class="stat-value" id="stat-avg">—</div>
+                    <div class="stat-label">Promedio diario</div>
+                    <div class="stat-change">
+                        <span class="material-icons sm">trending_up</span> Últimos 7 días
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h2>
+                        <span class="material-icons sm">bar_chart</span>
+                        Visitas — Últimos 7 días
+                    </h2>
+                    <span class="chart-meta" id="last-update">Cargando…</span>
+                </div>
+                <div class="bar-chart" id="bar-chart">
+                    <div style="color:var(--gray-400);font-size:.88rem;margin:auto">
+                        Cargando datos…
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

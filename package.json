@@ -1,0 +1,15 @@
+{
+  "name": "login-visit-counter",
+  "version": "1.0.0",
+  "description": "Login y panel de contador de visitas con Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  }
+}

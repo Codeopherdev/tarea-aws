@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión — VisitTracker</title>
+  <meta name="description" content="Inicia sesión para acceder al panel de visitas." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg-login"></div>
+
+  <main class="login-page">
+    <div class="login-wrapper">
+
+      <!-- Logo -->
+      <div class="login-logo">
+        <div class="logo-icon">
+          <span class="material-icons xl">bar_chart</span>
+        </div>
+        <h1>VisitTracker</h1>
+        <p>Panel de analíticas de visitas</p>
+      </div>
+
+      <!-- Card -->
+      <div class="card">
+        <div id="alert-error" class="alert alert-error">
+          <span class="material-icons sm">error_outline</span>
+          <span id="alert-msg">Error</span>
+        </div>
+
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label for="username">Usuario</label>
+            <div class="input-icon-wrapper">
+              <span class="icon material-icons sm">person_outline</span>
+              <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" autocomplete="username"
+                required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <div class="input-icon-wrapper">
+              <span class="icon material-icons sm">lock_outline</span>
+              <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña"
+                autocomplete="current-password" required />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="btn-login">
+            <span class="material-icons sm">login</span>
+            <span id="btn-text">Iniciar Sesión</span>
+          </button>
+        </form>
+
+        <div class="divider">credenciales de prueba</div>
+
+        <div class="credentials-hint">
+          <div class="cred-row">
+            <span class="material-icons sm">person</span>
+            <code>admin</code> /
+            <span class="material-icons sm">key</span>
+            <code>admin123</code>
+          </div>
+          <div class="cred-row">
+            <span class="material-icons sm">person</span>
+            <code>usuario</code> /
+            <span class="material-icons sm">key</span>
+            <code>pass123</code>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+
+</html>
